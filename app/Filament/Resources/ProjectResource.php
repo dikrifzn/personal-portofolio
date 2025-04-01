@@ -39,15 +39,7 @@ class ProjectResource extends Resource
                     ->schema([
                         Forms\Components\Grid::make(3)
                             ->schema([
-                                Forms\Components\FileUpload::make('image1')
-                                    ->image()
-                                    ->directory('projects')
-                                    ->required(),
-                                Forms\Components\FileUpload::make('image2')
-                                    ->image()
-                                    ->directory('projects')
-                                    ->required(),
-                                Forms\Components\FileUpload::make('image3')
+                                Forms\Components\FileUpload::make('image')
                                     ->image()
                                     ->directory('projects')
                                     ->required(),
@@ -64,9 +56,7 @@ class ProjectResource extends Resource
                 Tables\Columns\TextColumn::make('title'),
                 Tables\Columns\TextColumn::make('description'),
                 Tables\Columns\TextColumn::make('repository_url'),
-                Tables\Columns\ImageColumn::make('image1'),
-                Tables\Columns\ImageColumn::make('image2'),
-                Tables\Columns\ImageColumn::make('image3'),
+                Tables\Columns\ImageColumn::make('image'),
             ])
             ->filters([
                 //

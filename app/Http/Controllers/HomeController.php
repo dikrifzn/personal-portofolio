@@ -11,7 +11,7 @@ class HomeController extends Controller
 {
     public function index(){
         $projects = Project::latest('id')->take(2)->get();
-        $posts = Post::select('title', 'category', 'cover_image')->withCount(['likes', 'comments'])->latest('id')->take(3)->get();
+        $posts = Post::select('id', 'title', 'category', 'description', 'cover_image')->withCount(['likes', 'comments'])->latest('id')->take(4)->get();
 
         return view('home', compact('projects', 'posts'));
     }

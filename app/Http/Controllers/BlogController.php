@@ -19,7 +19,7 @@ class BlogController extends Controller
         $post = Post::where('id', $id)->withCount(['likes', 'comments'])->first();
         $comments = Comment::latest()->get();
 
-        return view('blogDetile', compact('post', 'comments'));
+        return view('blog-detile', compact('post', 'comments'));
     }
 
     public function store(Request $request, $id){

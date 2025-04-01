@@ -17,9 +17,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('description');
             $table->string('repository_url');
-            $table->string('image1');
-            $table->string('image2');
-            $table->string('image3');
+            $table->string('image');
             $table->softDeletes();
             $table->timestamps();
         });
